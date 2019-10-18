@@ -6,5 +6,5 @@ import org.springframework.stereotype.Component;
 public class HelloWorldComponent {
 	public void hello(String name) {
 		System.out.println("HelloComponent " + name);
-	};
+	}
 }

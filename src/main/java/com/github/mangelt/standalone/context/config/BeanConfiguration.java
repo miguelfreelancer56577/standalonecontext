@@ -5,16 +5,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-@Configuration
+//@Configuration
 @PropertySource("classpath:app.properties")
 public class BeanConfiguration {
 	
-	@Value("${cache.initial.capacity:default}")
+	@Value("${cache.initial.capacity}")
 	public String property;
 
 	@Bean("say_hello")
 	public String hello() {
 		return "Hello world.";
+	}
+	
+	@Bean
+	public int myValue() {
+		return 34555;
 	}
 	
 }
